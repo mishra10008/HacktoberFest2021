@@ -1,4 +1,23 @@
-// C++ program to implement recursive Binary Search
+
+/* Given two sequences, find the length of longest subsequence present in both of them.
+A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous.
+For example, “abc”, “abg”, “bdf”, “aeg”, ‘”acefg”,etc are subsequences of “abcdefg”. */
+/*
+Sample Input:
+6 6
+ABCDGH
+AEDFHR
+
+Output: 3
+
+
+Explanation: LCS for input Sequences
+“ABCDGH” and “AEDFHR” is “ADH” of
+length 3.
+*/
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
   
