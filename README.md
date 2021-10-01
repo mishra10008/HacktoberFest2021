@@ -2,7 +2,7 @@
 
 ![](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
 
-<h4>Readme Credit goes to <a href="https://github.com/saumyasrivastava08">@Soumya</a> </h3>
+<h4>Readme Credit goes to <a href="https://github.com/saumyasrivastava08">@Saumya</a> </h3>
   <br>
   
 > **Rules for the Contribution.**
