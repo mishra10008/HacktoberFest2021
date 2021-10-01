@@ -1,0 +1,17 @@
+int sumOddLengthSubarrays(vector<int>& arr) { 
+        int i,s,x,j,n = arr.size(); 
+        int ans=0;
+        for(i=0;i<arr.size();i++)
+        {
+            s=0;
+            x=0;
+        for(j=i;j<arr.size();j++)
+        { s+=arr[j];
+            if(x%2==0)
+                ans+=s;
+         x++;
+        }
+        }
+        return ans; }
+
+//https://leetcode.com/problems/sum-of-all-odd-length-subarrays/submissions/
