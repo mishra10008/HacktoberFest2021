@@ -1,0 +1,39 @@
+//https://www.codechef.com/LTIME12/problems/DIVSUBS
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define rep(i,n) for(int i=1;i<=n;i++)
+void solve()
+{
+    ll n,f=0;cin>>n;vector<int>arr(n+1),used(n,-1);
+    rep(i,n){cin>>arr[i];}
+    used[0]=0; int sum=0;
+    rep(i,n)
+    {
+       sum=(sum+arr[i])%n;
+       if(used[sum]!=-1)
+        {
+            cout<<i-used[sum]<<endl;
+            for(int j=used[sum]+1;j<=i;++j)
+                {printf("%d%c", j, j == i ? '\n' : ' ');}
+            return;
+        }
+        used[sum]=i;
+    }
+    cout<<-1<<endl;
+}
+int main()
+{
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("op.txt", "w", stdout);
+    #endif
+
+ int c;cin>>c;
+ while(c--)
+ {
+    solve();
+
+ }
+  return 0;
+}
