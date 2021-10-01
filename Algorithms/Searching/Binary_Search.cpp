@@ -1,19 +1,25 @@
+/*Given a sorted array of size N and an integer K, find the position at which K is present in the array using binary search.
 
-/* Given two sequences, find the length of longest subsequence present in both of them.
-A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous.
-For example, “abc”, “abg”, “bdf”, “aeg”, ‘”acefg”,etc are subsequences of “abcdefg”. */
-/*
 Sample Input:
-6 6
-ABCDGH
-AEDFHR
+5
+1 2 3 4 5 
+4
 
 Output: 3
 
+Explanation: 4 appears at index 3.
 
-Explanation: LCS for input Sequences
-“ABCDGH” and “AEDFHR” is “ADH” of
-length 3.
+
+Sample Input:
+
+5
+11 22 33 44 55
+445
+
+
+Output: -1
+
+Explanation: 445 is not present
 */
 
 
