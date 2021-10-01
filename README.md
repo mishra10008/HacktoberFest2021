@@ -7,6 +7,10 @@
   
   
  😎😎All Noobs and pro PR's Are  Welcome 😎😎<br><hr>
+ 
+### This repository aims to help code beginners with their first successful pull request and open source contribution. :partying_face:
+
+ 
 > **Rules for the Contribution.**
 1. Issues will be assigned on **First Come First Service Basis**.
 2. You can create a new `issue`.
