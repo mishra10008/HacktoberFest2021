@@ -7,7 +7,7 @@ using namespace std;
 #define ss              second
 #define ll             long long int
 #define int            long long int
-#define type           int
+#define type           int  
 #define type1          int
 #define type2          int
 #define pb              push_back
@@ -58,7 +58,7 @@ struct custom_hash {
 // Segemented sieve :it is a way to generate all prime numbers in larger range[L,R];
 // :Algorithm:
 // we have to generate all prime numbers till sqrt(r) using sieve.
-// we have to create an array of size R-L+1 and iniliazed with 0;
+// we have to  create an array of size R-L+1 and iniliazed with 0;
 //For each prime (p) from 2 to sqrt(r):
 // Set all divisors of p in range[L,R] is 1;
 //Then print the primes in the given range from the array whose value is 0.
