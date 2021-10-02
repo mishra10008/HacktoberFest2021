@@ -1,6 +1,6 @@
-    
-
-bool isValid(string s) {
+class Solution {
+public:
+    bool isValid(string s) {
         
         stack<char>s1;
         
@@ -29,3 +29,4 @@ bool isValid(string s) {
         
         return true;
     }
+};
