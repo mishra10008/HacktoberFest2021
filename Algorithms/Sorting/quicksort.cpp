@@ -1,70 +1,71 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<cstdio>
+#include<cmath>
 using namespace std;
 
-//Quick Sort Implementation
-
-int K = 0; int n;
-
-//arrange the elements right and left so that all left elements are small and all right elements are greater
-int arrange(int *arr, int low, int high)
+// To print array of length=size
+void printArray(int array[], int size)    
 {
-    int pivot = arr[high];
-    int i = low - 1;
-    for (int j = low; j <= high - 1; j++)
+  int i;
+  for (i=0; i < size; i++)
+    cout<<array[i]<<"\t";
+  cout<<endl;
+}
+
+// To swap two elements
+void swap(int* a, int* b)    
+{
+  int t = *a;
+  *a = *b;
+  *b = t;
+}
+
+/* This function takes last element as pivot, and places all smaller
+   elements to left of pivot and all greater elements to right of pivot */
+int partition (int array[], int low, int high)
+{
+  int pivot = array[high];    // pivot
+  int i = (low - 1);  // Index of smaller element
+  int j;
+
+  for (j = low; j <= high- 1; j++)
+  {
+    if (array[j] <= pivot)
     {
-        if (arr[j] <= pivot)
-        {
-            i++;
-            swap(arr[i], arr[j]);
-        }
+      i++;            // increment index of smaller element
+      swap(&array[i], &array[j]);    // shift all lesser elements in left half
     }
-    return i + 1;
+  }
+  swap(&array[i + 1], &array[high]);    // place pivot element at end of smaller elements
+  return (i + 1);    // the index of pivot element
 }
 
-//randomized partition function
-int partition(int *arr, int low, int high)
+// Recursive function to sort array with quicksort
+void quickSort(int array[], int low, int high)
 {
-    srand(time(0));
-    int random = low + (rand() % (high - low));
-    swap(arr[random], arr[high]);
-    return arrange(arr, low, high);
-}
+  if (low < high)
+  {
+    int pivot_index;
+    pivot_index = partition(array, low, high);
+    cout<<"Pivot element is "<<array[pivot_index]<<endl;
+    cout<<"Array after pivot partitioning : \n";
+    printArray(array,8);
 
-//quick funtion that calls partition and sorts recursively by arranging one element
-void quicksort(int *arr, int low, int high)
-{
-    if (low >= high)
-        return;
-    int pi = partition(arr, low, high);
-    quicksort(arr, low, pi - 1);
-    quicksort(arr, pi + 1, high);
-    return;
+    // Call quicksort() on left half and right half excluding
+    // pivot element as it is already at proper position i.e.
+    // between lesser and greater elements.
+    quickSort(array, low, pivot_index - 1);
+    quickSort(array, pivot_index + 1, high);
+  }
 }
-
 int main()
 {
-    //taking inputs
-    cin >> n;
-    int *arr = new int[n];
-    for (int i = 0; i < n; i++)
-        cin >> arr[i];
-
-    //starting timer before sort
-    auto start = std::chrono::system_clock::now();
-    //sorting
-    quicksort(arr, 0, n - 1);
-    //stoping the timer
-    auto end = std::chrono::system_clock::now();
-    //calculating the time taken by quick sort and printing
-    chrono::duration<double> elapsed_seconds = end - start;
-    time_t end_time = chrono::system_clock::to_time_t(end);
-    cout << "Elapsed time: " << elapsed_seconds.count() << "s\n";
-
-    //printing the sorted array
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-
-    //deleting the array
-    delete []arr;
-    return 0;
+  int array[] = {17, 13, 20, 16, 19, 24, 22, 21};
+  int n = sizeof(array)/sizeof(array[0]);
+  cout<<"Given array: \n";
+  printArray(array, n);
+  quickSort(array, 0, n-1);
+  cout<<"Sorted array: \n";
+  printArray(array, n);
+  return 0;
 }
