@@ -2,6 +2,7 @@
 
 <hr>
 <h3> Remember:-</h3>
-1.Add question <br>
-2.Add test Cases <br>
-3.Add Solution of the problem <br>
+<ol>
+<li>Add question</li> 
+<li>Add test Cases </li>
+<li>Add Solution of the problem </li>
