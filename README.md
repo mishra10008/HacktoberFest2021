@@ -1,6 +1,6 @@
 ## This repo will be partcipating in the [Hacktoberfest](https://hacktoberfest.digitalocean.com/) 2021.
 
-![](https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg)
+![](https://lh3.googleusercontent.com/tz7nHSCh0zpBsFeFD4Lq1_aRC1SVlmid5MSJsE4pjh36Ri_opdar0ltpV69gaTdMgqS8IFo=s85)
 
 <h4>Readme Credit goes to <a href="https://github.com/saumyasrivastava08">@Saumya</a> </h3>
   <br>
